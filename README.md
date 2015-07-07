@@ -1,3 +1,4 @@
+
 # Honey SQL
 
 SQL as Clojure data structures. Build queries programmatically -- even at runtime -- without having to bash strings together.
@@ -339,3 +340,5 @@ If you do implement a clause or function handler, consider submitting a pull req
 Copyright © 2012 Justin Kramer
 
 Distributed under the Eclipse Public License, the same as Clojure.
+
+
