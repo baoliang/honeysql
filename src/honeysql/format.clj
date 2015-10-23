@@ -143,6 +143,11 @@
     (apply expand-binary-ops "@>" a b more)
     (str (to-sql a) " @> " (to-sql b))))
 
+(defmethod fn-handler "json-like" [_ a b c & more]
+  (if (seq more)
+    (apply expand-binary-ops "->" a b c more)
+    (str (to-sql a) " ->> " "'" b "'"    " like "  (to-sql c))))
+
 (defmethod fn-handler ">" [_ a b & more]
   (if (seq more)
     (apply expand-binary-ops ">" a b more)
